@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+}
+
+.images_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img_box {
+    margin: 10px;
+    cursor: pointer;
+    width: fit-content;
+    transition: all 225ms ease-in-out;
+}
+
+.img_box img {
+    object-fit: cover;
+    height: 400px;
+    width: fit-content;
+}
+
+.bg1:hover {
+    transition: all 150ms ease-in-out;
+    transform: scale(0.9) rotate( 0.1deg);
+    box-shadow: 0px 0px 20px 4px black;
+}
+
+.bg1 {
+    transition: all 150ms ease-in-out;
+    box-shadow: 0px 0px 12px 4px black transparent;
+}
+
+.big_screen {
+    position: fixed;
+    height: 100vh;
+    object-fit: cover;
+    background-color: rgb(215 215 215 / 90%);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    z-index: 1;
+    transition: all 150ms ease-in-out;
+}
+
+.big_screen img {
+    height: 95vh;
+    margin: 20px 40px 20px 40px;
+    width: fit-content;
+}
+
+.d-none {
+    display: none;
+}
+
+#close_button {
+    height: 40px;
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    cursor: pointer;
+    border: transparent 25%;
+}
+
+#close_button:hover {
+    background-color: black;
+    border-radius: 25%;
+}
+
+.image_div {
+    max-width: 80vw;
+    object-fit: contain;
+}
+
+.next_arrow {
+    height: 30px !important;
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.back_arrow {
+    height: 30px !important;
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.next_arrow {
+    right: 70px;
+}
+
+.back_arrow {
+    left: 65px;
+}
+
+.next_arrow:hover {
+    transition: all 100ms ease-in-out;
+    background-color: rgba(102, 102, 102, 0.3);
+    padding: 20px;
+    border-radius: 100%;
+}
+
+.back_arrow:hover {
+    transition: all 100ms ease-in-out;
+    background-color: rgba(102, 102, 102, 0.5);
+    padding: 20px;
+    border-radius: 100%;
+}
+
+@media (max-width: 800px) {
+    .img_box img {
+        object-fit: cover;
+        width: 70vw;
+        margin: 0 !important;
+        height: 50vh;
+    }
+    .img_box {
+        margin: 20px;
+    }
+    .image_div {
+        max-width: 98vw;
+        object-fit: contain;
+        margin: 0;
+    }
+    .next_arrow {
+        right: -20px;
+        transition: all 225ms ease-in-out;
+    }
+    .back_arrow {
+        left: -20px;
+    }
+    #close_button {
+        right: 0px;
+        border-radius: 20%;
+        top: 0px;
+    }
+    .big_screen img {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 750px) {
+    #close_button {
+        top: 0px;
+    }
+}
